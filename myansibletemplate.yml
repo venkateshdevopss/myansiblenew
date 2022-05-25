@@ -1,7 +1,13 @@
 ---
 - hosts: all
+  become: yes
   tasks:
-  - name: i want to install git
+  - name: Install the "apache"
     apt:
-      name: git
+      name: apache2
       state: present
+
+  - name: Start service httpd, if not running
+    service:
+      name: apache2
+      state: restarted 
