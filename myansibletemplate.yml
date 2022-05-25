@@ -18,10 +18,10 @@
     yum:
       name: httpd
       state: present
-    when: ansible_os_family =="Redhat"
+    when: ansible_os_family =="RedHat"
 
   - name: Start service httpd, if not running
     service:
       name: httpd
       state: started 
-    when: ansible_os_family =="Redhat"  
+    when: ansible_os_family =="RedHat"  
