@@ -14,14 +14,14 @@
       state: restarted 
     when: ansible_os_family =="Debian"
 
-  - name: Install the "apache"
-    apt:
-      name: apache2
+  - name: Install the "webserver"
+    yum:
+      name: httpd
       state: present
     when: ansible_os_family =="Redhat"
 
   - name: Start service httpd, if not running
     service:
-      name: apache2
-      state: restarted 
+      name: httpd
+      state: started 
     when: ansible_os_family =="Redhat"  
