@@ -2,6 +2,3 @@
 172.31.40.81
 172.31.36.98
 
-[mywebservers:vars]
-mypackageofjavaonubuntu=openjdk-8-jre
-mypackageofjavaonredHat=java-1.8.0-openjdk
