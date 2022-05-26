@@ -4,24 +4,14 @@
   tasks:
   - name: Install the "apache"
     apt:
-      name: apache2
+      name: "{{mypackageofjavaonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
-  - name: Start service httpd, if not running
-    service:
-      name: apache2
-      state: restarted 
-    when: ansible_os_family =="Debian"
+  
 
   - name: Install the "webserver"
     yum:
-      name: httpd
+      name: "{{mypackageofjavaonredHat}}"
       state: present
-    when: ansible_os_family =="RedHat"
-
-  - name: Start service httpd, if not running
-    service:
-      name: httpd
-      state: started 
-    when: ansible_os_family =="RedHat"  
+    when: ansible_os_family =="RedHat" 
