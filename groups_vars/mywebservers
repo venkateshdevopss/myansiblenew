@@ -1,0 +1,3 @@
+---
+mypackageofjavaonubuntu: openjdk-8-jre
+mypackageofjavaonredHat: java-1.8.0-openjdk
